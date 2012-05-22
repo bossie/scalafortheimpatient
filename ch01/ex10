@@ -1,0 +1,20 @@
+scala> "scala".take(3)
+res0: String = sca
+
+scala> "scala".drop(3)
+res1: String = la
+
+scala> "scala".take(10)
+res2: String = scala
+
+scala> "scala".drop(10)
+res3: String = ""
+
+scala> "scala".takeRight(3)
+res4: String = ala
+
+scala> "scala".dropRight(3)
+res5: String = sc
+
+These functions are easier to use as they return the whole string/an empty string instead of throwing an IndexOutOfBoundsException. They also require less index arithmetics.
+

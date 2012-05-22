@@ -1,0 +1,5 @@
+scala> 10 max 2
+res10: Int = 10
+
+It returns the maximum of two integers. The method is defined in the RichInt class.
+

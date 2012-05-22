@@ -1,0 +1,5 @@
+scala> res7 = 1.5
+<console>:12: error: reassignment to val
+       res7 = 1.5
+            ^
+

@@ -1,0 +1,9 @@
+scala> import util.Random
+import util.Random
+
+scala> import math.BigInt.probablePrime
+import math.BigInt.probablePrime
+
+scala> probablePrime(100, Random)
+res13: scala.math.BigInt = 739787785057513004309081435699
+

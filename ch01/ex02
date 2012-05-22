@@ -1,0 +1,6 @@
+scala> sqrt(3)
+res6: Double = 1.7320508075688772
+
+scala> pow(res6, 2)
+res7: Double = 2.9999999999999996
+

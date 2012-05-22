@@ -1,0 +1,6 @@
+scala> "hello".head
+res20: Char = h
+
+scala> "hello".last
+res21: Char = o
+

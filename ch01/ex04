@@ -1,0 +1,5 @@
+scala> "crazy" * 3
+res9: String = crazycrazycrazy
+
+It returns the string concatenated three times. The method is in the StringOps class.
+

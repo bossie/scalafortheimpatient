@@ -1,0 +1,3 @@
+scala> BigInt(64, Random).toString(36)
+res18: String = 2zbm2qnwcsqce
+
