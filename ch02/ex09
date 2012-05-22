@@ -1,0 +1,9 @@
+scala> def product(s: String): Int = {
+     | if (s == "") 1
+     | else s.head.toInt * product(s.tail)
+     | }
+product: (s: String)Int
+
+scala> product("Hello")
+res41: Int = 825152896
+

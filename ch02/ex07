@@ -1,0 +1,3 @@
+scala> (for (c <- "Hello") yield c.toInt).product
+res35: Int = 825152896
+

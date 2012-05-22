@@ -1,0 +1,9 @@
+scala> var x: Unit = _
+x: Unit = ()
+
+scala> var y: Int = _
+y: Int = 0
+
+scala> x = y = 1
+x: Unit = ()
+

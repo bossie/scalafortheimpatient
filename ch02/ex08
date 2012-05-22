@@ -1,0 +1,6 @@
+scala> def product(s: String) = (for (c <- s) yield c.toInt).product
+product: (s: String)Int
+
+scala> product("Hello")
+res38: Int = 825152896
+
