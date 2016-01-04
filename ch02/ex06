@@ -1,7 +1,7 @@
 scala> var product = 1
 product: Int = 1
 
-scala> for (c <- "Hello") product *= c.toInt
+scala> for (c <- "Hello") product *= c
 
 scala> product
 res18: Int = 825152896

@@ -1,3 +1,6 @@
+scala> "Hello".map(_.toInt).product
+res0: Int = 825152896
+
 scala> (for (c <- "Hello") yield c.toInt).product
-res35: Int = 825152896
+res1: Int = 825152896
 

@@ -1,9 +1,22 @@
-scala> def product(s: String): Int = {
-     | if (s == "") 1
-     | else s.head.toInt * product(s.tail)
+scala> def recursiveProduct1(s: String): Int = {
+     |   if (s.isEmpty) 1
+     |   else s.head * recursiveProduct1(s.tail)
      | }
-product: (s: String)Int
+recursiveProduct1: (s: String)Int
 
-scala> product("Hello")
-res41: Int = 825152896
+scala> recursiveProduct1("Hello")
+res0: Int = 825152896
+
+scala> def recursiveProduct2(s: String): Int = {
+     |   def rec(start: Int): Int = {
+     |     if (start >= s.length) 1
+     |     else s(start) * rec(start + 1)
+     |   }
+     |
+     |   rec(0)
+     | }
+recursiveProduct2: (s: String)Int
+
+scala> recursiveProduct2("Hello")
+res1: Int = 825152896
 
