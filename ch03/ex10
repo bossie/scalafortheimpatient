@@ -1,0 +1,12 @@
+scala> import java.awt.datatransfer._
+import java.awt.datatransfer._
+
+scala> import scala.collection.JavaConversions._
+import scala.collection.JavaConversions._
+
+scala> val flavors = SystemFlavorMap.getDefaultFlavorMap.asInstanceOf[SystemFlavorMap]
+flavors: java.awt.datatransfer.SystemFlavorMap = java.awt.datatransfer.SystemFlavorMap@567d299b
+
+scala> val natives: scala.collection.mutable.Buffer[String] = flavors.getNativesForFlavor(DataFlavor.imageFlavor)
+natives: scala.collection.mutable.Buffer[String] = Buffer(image/png, image/x-png, image/jpeg, image/gif, PNG, JFIF)
+

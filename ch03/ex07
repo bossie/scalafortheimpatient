@@ -1,0 +1,6 @@
+scala> def duplicatesRemoved(ints: Array[Int]): Array[Int] = ints.distinct
+duplicatesRemoved: (ints: Array[Int])Array[Int]
+
+scala> duplicatesRemoved(Array(1, 2, 3, 2, 1))
+res9: Array[Int] = Array(1, 2, 3)
+

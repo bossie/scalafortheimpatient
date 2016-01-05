@@ -1,0 +1,16 @@
+scala> def swapAdjacent(ints: Array[Int]): Array[Int] = {
+     |   for {
+     |     i <- (0 until ints.length).toArray
+     |     j = i + 1
+     |   } yield
+     |     if (i % 2 == 0) ints(if (j < ints.length) j else i)
+     |     else ints(i - 1)
+     | }
+swapAdjacent: (ints: Array[Int])Array[Int]
+
+scala> swapAdjacent(Array(1, 2, 3, 4, 5))
+res0: Array[Int] = Array(2, 1, 4, 3, 5)
+
+scala> swapAdjacent(Array(1, 2, 3, 4))
+res1: Array[Int] = Array(2, 1, 4, 3)
+

@@ -1,0 +1,26 @@
+scala> import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable.ArrayBuffer
+
+scala> def partitioned(ints: Array[Int]): Array[Int] = {
+     |   val strictlyPositives = new ArrayBuffer[Int]()
+     |   val negatives = new ArrayBuffer[Int]()
+     |
+     |   for (x <- ints)
+     |     (if (x > 0) strictlyPositives else negatives) += x
+     |
+     |   (strictlyPositives ++= negatives).toArray
+     | }
+partitioned: (ints: Array[Int])Array[Int]
+
+scala> partitioned(Array(2, -1, 0, -2, 5))
+res0: Array[Int] = Array(2, 5, -1, 0, -2)
+
+scala> def partitioned2(ints: Array[Int]): Array[Int] = {
+     |   val (strictlyPositives, negatives) = ints.partition(x => x > 0)
+     |   strictlyPositives ++ negatives
+     | }
+partitioned2: (ints: Array[Int])Array[Int]
+
+scala> partitioned2(Array(2, -1, 0, -2, 5))
+res1: Array[Int] = Array(2, 5, -1, 0, -2)
+

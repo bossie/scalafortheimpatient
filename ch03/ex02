@@ -1,0 +1,20 @@
+scala> def swapAdjacentInPlace(ints: Array[Int]): Unit = {
+     |   for {
+     |     i <- 0 until ints.length by 2
+     |     j = i + 1 if j < ints.length
+     |   } {
+     |     val t = ints(i)
+     |     ints(i) = ints(j)
+     |     ints(j) = t
+     |   }
+     | }
+swapAdjacentInPlace: (ints: Array[Int])Unit
+
+scala> val ints = Array(1, 2, 3, 4, 5)
+ints: Array[Int] = Array(1, 2, 3, 4, 5)
+
+scala> swapAdjacentInPlace(ints)
+
+scala> ints
+res1: Array[Int] = Array(2, 1, 4, 3, 5)
+

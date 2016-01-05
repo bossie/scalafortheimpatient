@@ -1,0 +1,29 @@
+scala> import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable.ArrayBuffer
+
+scala> import scala.util.Sorting.stableSort
+import scala.util.Sorting.stableSort
+
+scala> def reverseSortedInPlace(ints: Array[Int]): Unit = stableSort(ints, (a: Int, b: Int) => a > b)
+reverseSortedInPlace: (ints: Array[Int])Unit
+
+scala> val ints = Array(2, -1, 0, -2, 5)
+ints: Array[Int] = Array(2, -1, 0, -2, 5)
+
+scala> reverseSortedInPlace(ints)
+
+scala> ints
+res1: Array[Int] = Array(5, 2, 0, -1, -2)
+
+scala> def reverseSorted(ints: Array[Int]) = ints.sortWith(_ > _)
+reverseSorted: (ints: Array[Int])Array[Int]
+
+scala> reverseSorted(Array(2, -1, 0, -2, 5))
+res2: Array[Int] = Array(5, 2, 0, -1, -2)
+
+scala> def reverseSorted(ints: ArrayBuffer[Int]) = ints.sortWith(_ > _)
+reverseSorted: (ints: scala.collection.mutable.ArrayBuffer[Int])scala.collection.mutable.ArrayBuffer[Int]
+
+scala> reverseSorted(ArrayBuffer(2, -1, 0, -2, 5))
+res8: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(5, 2, 0, -1, -2)
+
